@@ -8,38 +8,45 @@
 import SwiftUI
 import AlertToast
 
-struct CarListView: View {
-    //view model manages the requested data for the view
-    @StateObject var viewModel = CarListViewModel()
-    init(){
-        AppTheme.navigationBarColors(background: .black, titleColor: .white)
-        }
+struct CarListView: View{
+    @ObservedObject var viewModel: CarListViewModel
+    var interactor:CarListInteractorInput
     var body: some View {
         NavigationView {
             ZStack {
-                Color.black
-                    .ignoresSafeArea()
-                ProgressLoader(tintColor: .white, scaleSize: 2.0).padding(.bottom,50).hidden(!viewModel.showLoader)
-                List(viewModel.viewObject) { data in
-                        CarCell(data: data)
-                            .listRowBackground(Color.clear)
-                            .listRowInsets(.init())
-                    }
-                    .background(Color.clear)
-                    .listStyle(PlainListStyle())
+                background()
+                loader()
+                carList()
             }
-            .toast(isPresenting: $viewModel.showError,duration: 3){
-                    AlertToast(type: .regular, title: "Something went wrong")
+            .toast(isPresenting: $viewModel.viewError,duration: 3){
+                AlertToast(type: .regular, title: AppConstants.ErrorMessage.defaultError)
                     }
             .navigationBarTitle(Text(AppConstants.Text.appTitle))
         }
-        .onAppear(perform:viewModel.fetchData)
+        .onAppear(perform:interactor.fetchData)
     }
-
 }
 
+extension CarListView{
+    func carList()->some View{
+        List(viewModel.viewObject) { data in
+                CarCell(data: data)
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(.init())
+            }
+            .background(Color.clear)
+            .listStyle(PlainListStyle())
+    }
+    func background()->some View{
+        Color.black
+            .ignoresSafeArea()
+    }
+    func loader()->some View{
+        ProgressLoader(tintColor: .white, scaleSize: 2.0).padding(.bottom,50).hidden(!viewModel.viewLoader)
+    }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CarListView()
+        CarListConfigurator().configure()
     }
 }

@@ -50,7 +50,7 @@ struct APIService{
         var url:URL?{
             switch self{
             case .CarList:
-                let url = EndPoints.baseURL + "carlist"
+                let url = EndPoints.baseURL + "carlist.json"
                 guard let urlComponents = URLComponents(string: url) else{
                     return nil
                 }

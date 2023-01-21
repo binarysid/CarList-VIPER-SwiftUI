@@ -15,7 +15,7 @@ struct Inject<T>{
     }
 }
 
-// all the dependencies are created/invoked/registered from this manager
+// All the dependencies are created/invoked/registered from this manager
 final class DIManager {
     static let shared = DIManager()
     var container = Container()
@@ -30,19 +30,19 @@ final class DIManager {
     }
     private func registerPersistenceWorker(){
         container.register(CarPersistenceWorkerProtocol.self) { _  in
-            // Injecting context is must because we will use different context for unit testing
+            // Injecting context is mandatory because we will use different context for unit testing
             return CarPersistenceWorker(mainContext: .Main(CoreDataStack.mainContext), backgroundContext: .Background(CoreDataStack.backgroundContext))
         }
     }
-    private func registerDataWorker(){
-        container.register(CarDataWorkerProtocol.self){ _ in
-            return CarDataWorker()
+    private func registerNetworkRechability(){
+        container.register(ReachabilityProtocol.self){ _ in
+            return NetworkReachability()
         }
     }
     func registerAllDependencies(){
         Self.shared.registerAPIWorker()
         Self.shared.registerPersistenceWorker()
-        Self.shared.registerDataWorker()
+        Self.shared.registerNetworkRechability()
     }
     
 }

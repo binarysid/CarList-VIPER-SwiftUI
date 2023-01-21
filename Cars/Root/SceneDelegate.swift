@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let contentView = CarListView()
+        let contentView = CarListConfigurator().configure()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

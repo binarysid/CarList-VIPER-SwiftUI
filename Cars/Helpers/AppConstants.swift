@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreText
 
 enum AppConstants{
     enum Text{
@@ -14,5 +15,8 @@ enum AppConstants{
     enum Image{
         static let DefaultCar = "audi_q2"
         static let Splash = "splash"
+    }
+    enum ErrorMessage{
+        static let defaultError = "Something went wrong"
     }
 }

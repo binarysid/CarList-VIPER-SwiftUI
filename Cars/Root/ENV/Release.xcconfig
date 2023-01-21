@@ -1,0 +1,12 @@
+//
+//  Release.xcconfig
+//  Cars
+//
+//  Created by Linkon Sid on 25/12/22.
+//
+
+BASE_URL = binarysid.github.io/profile/api/
+
+// alternative api:
+// https://vpic.nhtsa.dot.gov/api/vehicles/GetWMIsForManufacturer/hon?vehicleType=car&format=json
+// https://vpic.nhtsa.dot.gov/api/vehicles/getmanufacturerdetails/honda?format=json

@@ -78,6 +78,7 @@ extension CarPersistenceWorker{
     // Time complexity: O(n)
     // Extra Space: O(n)
     // Extra space is used to optimize time complexity
+    // Searching on the dictionary reduces search complexity to O(1)
     private func updateEntitiesWithOptimization(from items:[CarData],to data:[Car]){
         var dataDict:[Int64:Car] = [:]
         for obj in data{
