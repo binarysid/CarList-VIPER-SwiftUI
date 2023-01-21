@@ -2,7 +2,7 @@
 
 The app shows a list of cars, with model name and description.
 
-The source code is writted in ✨VIP Clean Architecture✨ pattern. Following frameworks/tools/concepts are used to build the project:
+The source code is writted in ✨VIP Clean Architecture✨ pattern. Frameworks/Tools/Concepts used to build the project are as follows:
 
 -  Combine
 -  Custom Publisher/Subscriber
