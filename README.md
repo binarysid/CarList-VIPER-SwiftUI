@@ -1,8 +1,8 @@
-# Cars(iOS app)
+# Cars(iOS)
 
-The app shows a list of cars, with model name and description.
+The app shows list of cars, with model name and description.
 
-The project demonstrates the implementation of ✨VIP(View, Interactor, Presenter)✨ pattern. Frameworks/Tools/Concepts used to build the project are as follows:
+The building block of the project is Clean Architecture. It exploits the core concepts of ✨VIP(View, Interactor, Presenter)✨ pattern. Frameworks/Tools/Concepts used to build the project are as follows:
 
 -  Swift
 -  Combine
