@@ -17,7 +17,7 @@ struct CarListView: View{
             ZStack {
                 background()
                 loader()
-                carList()
+                itemList()
             }
             .toast(isPresenting: $state.viewError,duration: 3){
                 AlertToast(type: .regular, title: AppConstants.ErrorMessage.defaultError)
@@ -29,7 +29,7 @@ struct CarListView: View{
 }
 
 extension CarListView{
-    func carList()->some View{
+    func itemList()->some View{
         List(state.viewObject) { data in
                 CarCell(data: data)
                     .listRowBackground(Color.clear)
