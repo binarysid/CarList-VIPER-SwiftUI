@@ -14,3 +14,7 @@ The building block of the project is Clean Architecture. It exploits the core co
 -  Core Data
 -  XCTest for Unit Testing
 -  Swift Package Manager
+
+## App architecture:
+
+![alt text](https://github.com/binarysid/Cars/blob/main/app_architecture.png)
