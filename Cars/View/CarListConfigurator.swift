@@ -18,9 +18,10 @@ final class CarListConfigurator:ViewConfigurator{
         AppTheme.navigationBarColors(background: .black, titleColor: .white)
         let interactor = CarListInteractor()
         let presenter = CarListPresenter()
-        let viewModel = CarListViewState(viewDelegate: presenter)
+        let viewState = CarListViewState()
+        presenter.viewState = viewState
         interactor.presenter = presenter
-        return CarListView(viewModel: viewModel, interactor: interactor)
+        return CarListView(state: viewState, interactor: interactor)
     }
     
 }

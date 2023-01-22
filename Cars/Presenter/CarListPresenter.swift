@@ -18,13 +18,26 @@ protocol CarListPresentable:Loadable{
     func hasViewData()->Bool
     func showError()
 }
-final class CarListPresenter:CarListViewable{
-    @Published private(set) var viewError: Bool = false
-    @Published private(set) var viewLoader: Bool = false
-    @Published private(set) var viewObject: [CarViewData] = []
-    var viewErrorPublisher: Published<Bool>.Publisher{  $viewError }
-    var viewLoaderPublisher: Published<Bool>.Publisher{  $viewLoader }
-    var viewObjectPublisher: Published<[CarViewData]>.Publisher{ $viewObject }
+final class CarListPresenter{
+    private(set) var viewError: Bool = false{
+        didSet{
+            viewState.setErrorStatus(hasError: viewError)
+        }
+    }
+    private(set) var viewLoader: Bool = false{
+        didSet{
+            viewState.setActivityIndicator(show: viewLoader)
+        }
+    }
+    private(set) var viewObject: [CarViewData] = []{
+        didSet{
+            viewState.setViewObject(data: viewObject)
+        }
+    }
+//    var viewErrorPublisher: Published<Bool>.Publisher{  $viewError }
+//    var viewLoaderPublisher: Published<Bool>.Publisher{  $viewLoader }
+//    var viewObjectPublisher: Published<[CarViewData]>.Publisher{ $viewObject }
+    var viewState:CarListStateProtocol!
     private func processDateFrom(_ dateObj:Date?)->(date:String,time:String){
         var presentableTime = ""
         var presentableDate = ""

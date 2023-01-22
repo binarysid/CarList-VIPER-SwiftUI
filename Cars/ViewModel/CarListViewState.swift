@@ -18,42 +18,60 @@ protocol CarListViewable {
     var viewError:Bool{get}
     var viewErrorPublisher: Published<Bool>.Publisher { get }
 }
-
+protocol CarListStateProtocol{
+    func setViewObject(data:[CarViewData] )
+    func setActivityIndicator(show:Bool)
+    func setErrorStatus(hasError:Bool)
+}
 class CarListViewState: ObservableObject {
 
     @Published var viewObject:[CarViewData] = []
     @Published var viewLoader:Bool = false
     @Published var viewError:Bool = false
-    var viewDelegate: CarListViewable
-    var subscriptions = Set<AnyCancellable>()
-
-    init(viewDelegate: CarListViewable) {
-        self.viewDelegate = viewDelegate
-        // subscribe to view data stream
-        viewDelegate
-                .viewObjectPublisher
-                .receive(on: RunLoop.main)
-                .sink { [weak self] data in
-                    self?.viewObject = data
-            }
-                .store(in: &subscriptions)
-        // subscribe to activity indicator stream
-        viewDelegate
-                .viewLoaderPublisher
-                .receive(on: RunLoop.main)
-                .sink { [weak self] value in
-                    self?.viewLoader = value
-            }
-                .store(in: &subscriptions)
-        // subscribe to error stream
-        viewDelegate
-                .viewErrorPublisher
-                .receive(on: RunLoop.main)
-                .sink { [weak self] value in
-                    self?.viewError = value
-            }
-                .store(in: &subscriptions)
-    }
+//    var viewDelegate: CarListViewable
+//    var subscriptions = Set<AnyCancellable>()
+//
+//    init(viewDelegate: CarListViewable) {
+//        self.viewDelegate = viewDelegate
+//        // subscribe to view data stream
+//        viewDelegate
+//                .viewObjectPublisher
+//                .receive(on: RunLoop.main)
+//                .sink { [weak self] data in
+//                    self?.viewObject = data
+//            }
+//                .store(in: &subscriptions)
+//        // subscribe to activity indicator stream
+//        viewDelegate
+//                .viewLoaderPublisher
+//                .receive(on: RunLoop.main)
+//                .sink { [weak self] value in
+//                    self?.viewLoader = value
+//            }
+//                .store(in: &subscriptions)
+//        // subscribe to error stream
+//        viewDelegate
+//                .viewErrorPublisher
+//                .receive(on: RunLoop.main)
+//                .sink { [weak self] value in
+//                    self?.viewError = value
+//            }
+//                .store(in: &subscriptions)
+//    }
 
 }
 
+extension CarListViewState:CarListStateProtocol{
+    func setViewObject(data: [CarViewData]) {
+        viewObject = data
+    }
+    
+    func setActivityIndicator(show: Bool) {
+        viewLoader = show
+    }
+    
+    func setErrorStatus(hasError: Bool) {
+        viewError = hasError
+    }
+    
+}

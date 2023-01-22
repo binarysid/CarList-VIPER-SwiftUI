@@ -9,7 +9,7 @@ import SwiftUI
 import AlertToast
 
 struct CarListView: View{
-    @ObservedObject var viewModel: CarListViewState
+    @ObservedObject var state: CarListViewState
     var interactor:CarListInteractorInput
     var body: some View {
         NavigationView {
@@ -18,7 +18,7 @@ struct CarListView: View{
                 loader()
                 carList()
             }
-            .toast(isPresenting: $viewModel.viewError,duration: 3){
+            .toast(isPresenting: $state.viewError,duration: 3){
                 AlertToast(type: .regular, title: AppConstants.ErrorMessage.defaultError)
                     }
             .navigationBarTitle(Text(AppConstants.Text.appTitle))
@@ -29,7 +29,7 @@ struct CarListView: View{
 
 extension CarListView{
     func carList()->some View{
-        List(viewModel.viewObject) { data in
+        List(state.viewObject) { data in
                 CarCell(data: data)
                     .listRowBackground(Color.clear)
                     .listRowInsets(.init())
@@ -42,7 +42,7 @@ extension CarListView{
             .ignoresSafeArea()
     }
     func loader()->some View{
-        ProgressLoader(tintColor: .white, scaleSize: 2.0).padding(.bottom,50).hidden(!viewModel.viewLoader)
+        ProgressLoader(tintColor: .white, scaleSize: 2.0).padding(.bottom,50).hidden(!state.viewLoader)
     }
 }
 struct ContentView_Previews: PreviewProvider {
