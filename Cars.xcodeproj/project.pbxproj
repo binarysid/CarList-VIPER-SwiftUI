@@ -26,7 +26,6 @@
 		062B9D3E294BCFA000DC645C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062B9D28294BCFA000DC645C /* Assets.xcassets */; };
 		062B9D3F294BCFA000DC645C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2A294BCFA000DC645C /* Extensions.swift */; };
 		062B9D40294BCFA000DC645C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2B294BCFA000DC645C /* AppConstants.swift */; };
-		062B9D41294BCFA000DC645C /* CarDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2D294BCFA000DC645C /* CarDataWorker.swift */; };
 		062B9D42294BCFA000DC645C /* CarAPIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2E294BCFA000DC645C /* CarAPIWorker.swift */; };
 		062B9D43294BCFA000DC645C /* CarPersistenceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2F294BCFA000DC645C /* CarPersistenceWorker.swift */; };
 		064C5EF32959CAC500B646CA /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C5EEF2959CAC500B646CA /* Car+CoreDataProperties.swift */; };
@@ -104,7 +103,6 @@
 		062B9D28294BCFA000DC645C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		062B9D2A294BCFA000DC645C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		062B9D2B294BCFA000DC645C /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		062B9D2D294BCFA000DC645C /* CarDataWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarDataWorker.swift; sourceTree = "<group>"; };
 		062B9D2E294BCFA000DC645C /* CarAPIWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarAPIWorker.swift; sourceTree = "<group>"; };
 		062B9D2F294BCFA000DC645C /* CarPersistenceWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPersistenceWorker.swift; sourceTree = "<group>"; };
 		064C5EEF2959CAC500B646CA /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 		062B9D2C294BCFA000DC645C /* Workers */ = {
 			isa = PBXGroup;
 			children = (
-				062B9D2D294BCFA000DC645C /* CarDataWorker.swift */,
 				062B9D2E294BCFA000DC645C /* CarAPIWorker.swift */,
 				062B9D2F294BCFA000DC645C /* CarPersistenceWorker.swift */,
 			);
@@ -577,7 +574,6 @@
 				06870259294BBC8100C48AAB /* AppDelegate.swift in Sources */,
 				062B9D34294BCFA000DC645C /* CDFetchResultPublisher.swift in Sources */,
 				062B9D40294BCFA000DC645C /* AppConstants.swift in Sources */,
-				062B9D41294BCFA000DC645C /* CarDataWorker.swift in Sources */,
 				062B9D43294BCFA000DC645C /* CarPersistenceWorker.swift in Sources */,
 				0690ECEF297B4EA200FE6C96 /* NetworkReachability.swift in Sources */,
 				0690ECEB297A04F500FE6C96 /* CarListConfigurator.swift in Sources */,

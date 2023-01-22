@@ -15,7 +15,6 @@ class CarAPIRepoTest: XCTestCase {
     var expectation:XCTestExpectation!
     var subscriptions = Set<AnyCancellable>()
     let testBundle = Bundle(for: CarsTests.self)
-    var dataWorker = CarDataWorker()
 
     override func setUp() {
         apiClient = MockCarAPIRepository()
@@ -37,29 +36,6 @@ class CarAPIRepoTest: XCTestCase {
             }
         }, receiveValue: { data in
             XCTAssertTrue(data.count>0, "No Data Found")
-            self.expectation.fulfill()
-        })
-        .store(in: &subscriptions)
-        apiWorker.requestForDomainData()
-        self.waitForExpectations(timeout: 0.0, handler: nil)
-    }
-    func test_data_worker(){
-        apiWorker.resultPublisher.sink(receiveCompletion: { completion in
-            if case .failure(let error) = completion{
-                XCTFail(error.errorDescription)
-                self.expectation.fulfill()
-            }
-        }, receiveValue: {[unowned self] data in
-            XCTAssertTrue(data.count>0, "No Data Found")
-            let viewData = self.dataWorker.processViewDataFrom(articles: data)
-            guard let item = viewData.first else {
-                XCTFail("View Data not Found")
-                return
-            }
-            XCTAssertFalse(item.title.isEmpty, "No title Found")
-            XCTAssertNotNil(item.image, "No Image found")
-            XCTAssertFalse(item.description.isEmpty, "No description Found")
-            XCTAssertNotNil(item.date, "No Date found")
             self.expectation.fulfill()
         })
         .store(in: &subscriptions)

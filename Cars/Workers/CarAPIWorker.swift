@@ -16,7 +16,6 @@ protocol NetWorkerProtocol{
 }
 // All network calls are managed by this class
 final class CarAPIWorker<T:CarAPIClientProtocol>:NetWorkerProtocol{
-    private let dataWorker = CarDataWorker()
     var subscriptions = Set<AnyCancellable>()
     var resultPublisher = PassthroughSubject<[CarData], APIService.Error>()
     var apiRepository:T?

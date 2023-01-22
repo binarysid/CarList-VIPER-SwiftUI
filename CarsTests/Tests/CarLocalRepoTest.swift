@@ -18,7 +18,6 @@ class CarLocalRepoTest: XCTestCase {
     var persistenceContainer = CoreDataStackTest.shared.persistentContainer
     let sourceRequestParam = URLRequest(url: URL(string: "https://google.com")!)
     let fetchRequest = Car.fetchRequest()
-    var dataWorker = CarDataWorker()
 
     private var mainContext:NSManagedObjectContext{
         CoreDataStackTest.shared.mainContext
@@ -122,32 +121,6 @@ class CarLocalRepoTest: XCTestCase {
 //        self.waitForExpectations(timeout: 0.0,handler: nil)
 //    }
 
-    func test_data_worker(){
-        carRepo.getData(fetchRequest, backgroundContext)
-            .sink(receiveCompletion: {[weak self] completion in
-                if case .failure(let error) = completion{
-                    XCTFail(error.errorDescription)
-                    self?.expectation.fulfill()
-                }
-            }, receiveValue: {[unowned self] data in
-                guard data.count>0 else{
-                    XCTFail("No Data Found")
-                    return
-                }
-                let viewData = self.dataWorker.processViewDataFrom(cars: data)
-                guard let item = viewData.first else {
-                    XCTFail("View Data not Found")
-                    return
-                }
-                XCTAssertFalse(item.title.isEmpty, "No title Found")
-                XCTAssertNotNil(item.image, "No Image found")
-                XCTAssertFalse(item.description.isEmpty, "No description Found")
-                XCTAssertNotNil(item.date, "No Date found")
-                self.expectation.fulfill()
-            })
-            .store(in: &subscriptions)
-        self.waitForExpectations(timeout: 2.0, handler: nil)
-    }
 //    func test_create_car_list(){
 //        expectation(forNotification: .NSManagedObjectContextDidSave, object: backgroundContext) { _ in
 //            return true
