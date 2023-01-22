@@ -11,7 +11,7 @@ import Foundation
 protocol CarListInteractorInput{
     func fetchData()
 }
-// This class acts as Brain of the project. Receives request from View, communicates with different workers to get and process the data and sends the data to the presenter
+// This class acts as Brain of the project. Receives request from View, communicates with different workers to parse data and sends them to the presenter
 final class CarListInteractor{
 
     @Inject
