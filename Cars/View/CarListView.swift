@@ -9,7 +9,7 @@ import SwiftUI
 import AlertToast
 
 struct CarListView: View{
-    @ObservedObject var viewModel: CarListViewModel
+    @ObservedObject var viewModel: CarListViewState
     var interactor:CarListInteractorInput
     var body: some View {
         NavigationView {

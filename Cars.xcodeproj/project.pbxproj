@@ -53,7 +53,7 @@
 		06870256294BB87500C48AAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06870255294BB87500C48AAB /* SceneDelegate.swift */; };
 		06870259294BBC8100C48AAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06870258294BBC8100C48AAB /* AppDelegate.swift */; };
 		0690ECB02979ADFB00FE6C96 /* CarListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690ECAF2979ADFB00FE6C96 /* CarListPresenter.swift */; };
-		0690ECE92979F6D500FE6C96 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690ECE82979F6D500FE6C96 /* CarListViewModel.swift */; };
+		0690ECE92979F6D500FE6C96 /* CarListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690ECE82979F6D500FE6C96 /* CarListViewState.swift */; };
 		0690ECEB297A04F500FE6C96 /* CarListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690ECEA297A04F400FE6C96 /* CarListConfigurator.swift */; };
 		0690ECED297B4A9C00FE6C96 /* MockCarListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690ECEC297B4A9C00FE6C96 /* MockCarListPresenter.swift */; };
 		0690ECEF297B4EA200FE6C96 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690ECEE297B4EA200FE6C96 /* NetworkReachability.swift */; };
@@ -132,7 +132,7 @@
 		06870257294BB92D00C48AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06870258294BBC8100C48AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0690ECAF2979ADFB00FE6C96 /* CarListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenter.swift; sourceTree = "<group>"; };
-		0690ECE82979F6D500FE6C96 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
+		0690ECE82979F6D500FE6C96 /* CarListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewState.swift; sourceTree = "<group>"; };
 		0690ECEA297A04F400FE6C96 /* CarListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListConfigurator.swift; sourceTree = "<group>"; };
 		0690ECEC297B4A9C00FE6C96 /* MockCarListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCarListPresenter.swift; sourceTree = "<group>"; };
 		0690ECEE297B4EA200FE6C96 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		062B9D0F294BCF8D00DC645C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0690ECE82979F6D500FE6C96 /* CarListViewModel.swift */,
+				0690ECE82979F6D500FE6C96 /* CarListViewState.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -584,7 +584,7 @@
 				062B9D35294BCFA000DC645C /* CDSaveModelPublisher.swift in Sources */,
 				064C5EF42959CAC500B646CA /* Car+CoreDataClass.swift in Sources */,
 				062B9D3D294BCFA000DC645C /* CarData.swift in Sources */,
-				0690ECE92979F6D500FE6C96 /* CarListViewModel.swift in Sources */,
+				0690ECE92979F6D500FE6C96 /* CarListViewState.swift in Sources */,
 				061429AA2958C765006FE89B /* Config.swift in Sources */,
 				068701EA294B9F0200C48AAB /* CarListView.swift in Sources */,
 				06870256294BB87500C48AAB /* SceneDelegate.swift in Sources */,

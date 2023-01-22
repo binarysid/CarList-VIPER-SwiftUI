@@ -19,7 +19,7 @@ protocol CarListViewable {
     var viewErrorPublisher: Published<Bool>.Publisher { get }
 }
 
-class CarListViewModel: ObservableObject {
+class CarListViewState: ObservableObject {
 
     @Published var viewObject:[CarViewData] = []
     @Published var viewLoader:Bool = false
