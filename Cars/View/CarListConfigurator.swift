@@ -12,6 +12,7 @@ protocol ViewConfigurator{
     func configure()->T
 }
 
+// VIP Cycle configurator. This class mainly creates relationship between classes
 final class CarListConfigurator:ViewConfigurator{
     typealias T = CarListView
     func configure()-> CarListView {
