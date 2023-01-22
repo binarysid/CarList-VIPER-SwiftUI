@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0603C85B297DC59D00A6037B /* CarListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0603C85A297DC59D00A6037B /* CarListPresenterTest.swift */; };
 		0603C85D297DC6FF00A6037B /* CarListViewStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0603C85C297DC6FF00A6037B /* CarListViewStateMock.swift */; };
+		0603C860297DE88300A6037B /* CarListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0603C85F297DE88300A6037B /* CarListRouter.swift */; };
 		06098558294E48BD006AE465 /* CombineReachability in Frameworks */ = {isa = PBXBuildFile; productRef = 06098557294E48BD006AE465 /* CombineReachability */; };
 		060BF8772953ACE100CA82E8 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 060BF8762953ACE100CA82E8 /* AlertToast */; };
 		061429AA2958C765006FE89B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061429A92958C765006FE89B /* Config.swift */; };
@@ -87,6 +88,7 @@
 /* Begin PBXFileReference section */
 		0603C85A297DC59D00A6037B /* CarListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenterTest.swift; sourceTree = "<group>"; };
 		0603C85C297DC6FF00A6037B /* CarListViewStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewStateMock.swift; sourceTree = "<group>"; };
+		0603C85F297DE88300A6037B /* CarListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListRouter.swift; sourceTree = "<group>"; };
 		061429A62958C56C006FE89B /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		061429A72958C57F006FE89B /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		061429A82958C58F006FE89B /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -175,6 +177,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0603C85E297DE85D00A6037B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0603C85F297DE88300A6037B /* CarListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		061429A52958C4C2006FE89B /* ENV */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +349,7 @@
 		068701E6294B9F0200C48AAB /* Cars */ = {
 			isa = PBXGroup;
 			children = (
+				0603C85E297DE85D00A6037B /* Router */,
 				0690ECE72979F6BB00FE6C96 /* Interactor */,
 				0690ECAE2979ADDE00FE6C96 /* Presenter */,
 				06870242294BA00500C48AAB /* View */,
@@ -608,6 +619,7 @@
 				062B9D39294BCFA000DC645C /* APIService.swift in Sources */,
 				06ADD9142951FA190022658B /* CoreDataStack.swift in Sources */,
 				06593E1F294DCF9D00406025 /* CarCell.swift in Sources */,
+				0603C860297DE88300A6037B /* CarListRouter.swift in Sources */,
 				062B9D42294BCFA000DC645C /* CarAPIWorker.swift in Sources */,
 				064C5EF52959CAC500B646CA /* Content+CoreDataProperties.swift in Sources */,
 				066FB8452953A27C00DAD613 /* ProgressLoader.swift in Sources */,

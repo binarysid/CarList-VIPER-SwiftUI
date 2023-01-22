@@ -11,6 +11,7 @@ import AlertToast
 struct CarListView: View{
     @ObservedObject var state: CarListViewState
     var interactor:CarListInteractorInput
+    var router:CarListRouter
     var body: some View {
         NavigationView {
             ZStack {
@@ -33,6 +34,9 @@ extension CarListView{
                 CarCell(data: data)
                     .listRowBackground(Color.clear)
                     .listRowInsets(.init())
+                    .onTapGesture {
+                        router.routeToDetailView()
+                    }
             }
             .background(Color.clear)
             .listStyle(PlainListStyle())

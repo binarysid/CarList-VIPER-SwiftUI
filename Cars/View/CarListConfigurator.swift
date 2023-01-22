@@ -20,9 +20,10 @@ final class CarListConfigurator:ViewConfigurator{
         let interactor = CarListInteractor()
         let presenter = CarListPresenter()
         let viewState = CarListViewState()
+        let router = CarListRouter()
         presenter.viewState = viewState
         interactor.presenter = presenter
-        return CarListView(state: viewState, interactor: interactor)
+        return CarListView(state: viewState, interactor: interactor, router: router)
     }
     
 }
