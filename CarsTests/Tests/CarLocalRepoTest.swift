@@ -11,7 +11,7 @@ import CoreData
 @testable import Cars
 
 class CarLocalRepoTest: XCTestCase {
-    var carRepo = CarLocalRepository()
+    var sut = CarLocalRepository()
     var dataSourceRepository = MockCarAPIRepository()
     var expectation: XCTestExpectation!
     var subscriptions = Set<AnyCancellable>()
@@ -46,7 +46,7 @@ class CarLocalRepoTest: XCTestCase {
                     self.expectation.fulfill()
                 }
             }, receiveValue: {data in
-                self.carRepo.create(data.content.first!, context: self.mainContext){result in
+                self.sut.create(data.content.first!, context: self.mainContext){result in
                     switch result{
                     case .success(let car):
                         XCTAssertNotNil(car, PersistenceFailure.DataHandlingError.errorDescription)
@@ -63,7 +63,7 @@ class CarLocalRepoTest: XCTestCase {
         }
     }
     func test_fetch_car(){
-        carRepo.getData(fetchRequest, mainContext)
+        sut.getData(fetchRequest, mainContext)
             .sink(receiveCompletion: {[weak self] completion in
                 if case .failure(let error) = completion{
                     XCTFail(error.errorDescription)

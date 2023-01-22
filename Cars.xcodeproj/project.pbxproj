@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0603C85B297DC59D00A6037B /* CarListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0603C85A297DC59D00A6037B /* CarListPresenterTest.swift */; };
+		0603C85D297DC6FF00A6037B /* CarListViewStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0603C85C297DC6FF00A6037B /* CarListViewStateMock.swift */; };
 		06098558294E48BD006AE465 /* CombineReachability in Frameworks */ = {isa = PBXBuildFile; productRef = 06098557294E48BD006AE465 /* CombineReachability */; };
 		060BF8772953ACE100CA82E8 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 060BF8762953ACE100CA82E8 /* AlertToast */; };
 		061429AA2958C765006FE89B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061429A92958C765006FE89B /* Config.swift */; };
@@ -83,6 +85,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0603C85A297DC59D00A6037B /* CarListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenterTest.swift; sourceTree = "<group>"; };
+		0603C85C297DC6FF00A6037B /* CarListViewStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewStateMock.swift; sourceTree = "<group>"; };
 		061429A62958C56C006FE89B /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		061429A72958C57F006FE89B /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		061429A82958C58F006FE89B /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 				066FB82A2952633800DAD613 /* CarLocalRepoTest.swift */,
 				066FB83D295381B900DAD613 /* CarAPIRepoTest.swift */,
 				0676C8E82954C8910026986F /* CarListInteractorTest.swift */,
+				0603C85A297DC59D00A6037B /* CarListPresenterTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				066FB82C2952747B00DAD613 /* CoreDataStackTest.swift */,
 				0690ECEC297B4A9C00FE6C96 /* MockCarListPresenter.swift */,
 				06929BCC297B60E1006B47CE /* MockNetworkReachability.swift */,
+				0603C85C297DC6FF00A6037B /* CarListViewStateMock.swift */,
 			);
 			path = "Mock Clients";
 			sourceTree = "<group>";
@@ -618,9 +624,11 @@
 				066FB843295383BC00DAD613 /* CarsTests.swift in Sources */,
 				066FB82D2952747B00DAD613 /* CoreDataStackTest.swift in Sources */,
 				0676C8E92954C8910026986F /* CarListInteractorTest.swift in Sources */,
+				0603C85D297DC6FF00A6037B /* CarListViewStateMock.swift in Sources */,
 				06929BCD297B60E1006B47CE /* MockNetworkReachability.swift in Sources */,
 				066FB8462953A27C00DAD613 /* ProgressLoader.swift in Sources */,
 				066FB83E295381B900DAD613 /* CarAPIRepoTest.swift in Sources */,
+				0603C85B297DC59D00A6037B /* CarListPresenterTest.swift in Sources */,
 				066FB82E295336B200DAD613 /* DataModel_v1.xcdatamodeld in Sources */,
 				06ADD9042950619A0022658B /* MockCarAPIRepository.swift in Sources */,
 			);

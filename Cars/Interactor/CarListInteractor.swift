@@ -26,14 +26,14 @@ final class CarListInteractor{
         didSet{
             if let data = apiData{
                 self.persistenceWorker.save(from: data)
-                self.presenter.processViewDataFrom(articles: data)
+                self.presenter.presentViewDataFromAPIData(articles: data)
             }
         }
     }
     private(set) var localData:[Car]?{
         didSet{
             if let data = localData{
-                self.presenter.processViewDataFrom(cars: data)
+                self.presenter.presentViewDataFromLocalData(cars: data)
             }
         }
     }

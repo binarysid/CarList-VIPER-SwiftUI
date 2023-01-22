@@ -13,8 +13,8 @@ protocol Loadable{
     func hideLoader()
 }
 protocol CarListPresentable:Loadable{
-    func processViewDataFrom(articles:[CarData])
-    func processViewDataFrom(cars:[Car])
+    func presentViewDataFromAPIData(articles:[CarData])
+    func presentViewDataFromLocalData(cars:[Car])
     func hasViewData()->Bool
     func showError()
 }
@@ -50,7 +50,7 @@ final class CarListPresenter{
 
 extension CarListPresenter:CarListPresentable{
     // Convert API data to Presentable object
-    func processViewDataFrom(articles:[CarData]){
+    func presentViewDataFromAPIData(articles:[CarData]){
         viewObject = articles.map{[weak self] item -> CarViewData in // convert to domain object for presentation
             var resultDate = ""
             var resultTime = ""
@@ -62,7 +62,7 @@ extension CarListPresenter:CarListPresentable{
         }
     }
     // Convert Local data to Presentable object
-    func processViewDataFrom(cars:[Car]){
+    func presentViewDataFromLocalData(cars:[Car]){
         viewObject = cars.map{[weak self] item -> CarViewData in // convert to domain object for presentation
             var resultDate = ""
             var resultTime = ""

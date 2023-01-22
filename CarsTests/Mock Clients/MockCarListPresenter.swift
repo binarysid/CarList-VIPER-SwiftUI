@@ -14,11 +14,11 @@ final class MockCarListPresenter:CarListPresentable{
     var hasError = false
     var isLoaderVisible = false
    
-    func processViewDataFrom(articles: [CarData]) {
+    func presentViewDataFromAPIData(articles: [CarData]) {
         apiDataPresenterCalled = true
     }
     
-    func processViewDataFrom(cars: [Car]) {
+    func presentViewDataFromLocalData(cars: [Car]) {
         localDataPresenterCalled = true
     }
     
