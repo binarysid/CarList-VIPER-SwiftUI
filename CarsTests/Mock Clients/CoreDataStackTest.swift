@@ -7,7 +7,7 @@
 
 import XCTest
 import CoreData
-
+// for unit testing core data also make sure to check your data model file target is set to unit test module. And also check your Entities(inside data model file) module property set to Global namespace
 final class CoreDataStackTest{
     static let shared = CoreDataStackTest()
     private init(){}
