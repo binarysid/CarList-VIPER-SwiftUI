@@ -19,6 +19,7 @@ struct SplashView: View {
                     .resizable()
                     .scaledToFit()
             }
+            
         }
         .onAppear {
             // load main view after 2 sec

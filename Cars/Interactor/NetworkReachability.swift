@@ -13,6 +13,7 @@ enum NetworkStatus{
     case Offline
     case None
 }
+
 protocol ReachabilityProtocol{
     var status:NetworkStatus{get}
     var statusPublisher: Published<NetworkStatus>.Publisher { get }
