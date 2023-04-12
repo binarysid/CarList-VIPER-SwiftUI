@@ -1,0 +1,9 @@
+sources:
+  - ../../Cars
+templates:
+  - templates/AutoMockable.stencil
+output:
+  ../../CarsTests/Mocks/Mocks+Generated.swift
+args:
+  autoMockableTestableImports: ["Cars"]
+  autoMockableImports: []

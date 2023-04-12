@@ -12,6 +12,7 @@
 		0603C860297DE88300A6037B /* CarListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0603C85F297DE88300A6037B /* CarListRouter.swift */; };
 		06098558294E48BD006AE465 /* CombineReachability in Frameworks */ = {isa = PBXBuildFile; productRef = 06098557294E48BD006AE465 /* CombineReachability */; };
 		060BF8772953ACE100CA82E8 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 060BF8762953ACE100CA82E8 /* AlertToast */; };
+		0614172E29E6E06B0016A42E /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0614172D29E6E06B0016A42E /* Localized.strings */; };
 		061429AA2958C765006FE89B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061429A92958C765006FE89B /* Config.swift */; };
 		062B9D11294BCF8D00DC645C /* CarListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D10294BCF8D00DC645C /* CarListInteractor.swift */; };
 		062B9D30294BCFA000DC645C /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D13294BCFA000DC645C /* RepositoryProtocol.swift */; };
@@ -89,6 +90,7 @@
 		0603C85A297DC59D00A6037B /* CarListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenterTest.swift; sourceTree = "<group>"; };
 		0603C85C297DC6FF00A6037B /* CarListViewStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewStateMock.swift; sourceTree = "<group>"; };
 		0603C85F297DE88300A6037B /* CarListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListRouter.swift; sourceTree = "<group>"; };
+		0614172D29E6E06B0016A42E /* Localized.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localized.strings; sourceTree = "<group>"; };
 		061429A62958C56C006FE89B /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		061429A72958C57F006FE89B /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		061429A82958C58F006FE89B /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -185,6 +187,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		0614172C29E6E0410016A42E /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				0614172D29E6E06B0016A42E /* Localized.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
 		061429A52958C4C2006FE89B /* ENV */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +280,7 @@
 		062B9D29294BCFA000DC645C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0614172C29E6E0410016A42E /* Localizables */,
 				062B9D2A294BCFA000DC645C /* Extensions.swift */,
 				062B9D2B294BCFA000DC645C /* AppConstants.swift */,
 				066FB8442953A27C00DAD613 /* ProgressLoader.swift */,
@@ -558,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0614172E29E6E06B0016A42E /* Localized.strings in Resources */,
 				062B9D3E294BCFA000DC645C /* Assets.xcassets in Resources */,
 				068701EF294B9F0600C48AAB /* Preview Assets.xcassets in Resources */,
 			);
