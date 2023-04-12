@@ -24,6 +24,7 @@ final class NetworkReachability:ReachabilityProtocol{
     var statusPublisher: Published<NetworkStatus>.Publisher{ $status }
     private var reachability: Reachability?
     private var subscriptions = Set<AnyCancellable>()
+    
     deinit{
         reachability?.stopNotifier()
     }
