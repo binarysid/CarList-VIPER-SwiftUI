@@ -28,12 +28,12 @@
       }
     },
     {
-      "identity" : "swinject",
+      "identity" : "webservice",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Swinject/Swinject.git",
+      "location" : "https://github.com/binarysid/WebService.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "dfb78563c581eea560ea90c19dbe8d1d93d11260"
+        "branch" : "main",
+        "revision" : "9403c946df188d3c9ce6e7ab7edf928ec9fa9f92"
       }
     }
   ],

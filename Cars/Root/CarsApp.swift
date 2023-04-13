@@ -7,24 +7,8 @@
 
 import SwiftUI
 
-
-//struct MainApp {
-//    static func main() {
-//
-//                if #available(iOS 14.0, *) {
-//                    CarsApp.main()
-//                }
-//                else {
-//                    UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, NSStringFromClass(SceneDelegate.self))
-//                }
-//            }
-//}
-
 @main
-struct CarsApp:App{
-    init(){
-        DIManager.shared.registerAllDependencies()
-    }
+struct CarsApp: App {
     var body: some Scene {
         WindowGroup {
             SplashView()

@@ -10,7 +10,7 @@ import SwiftUI
 struct ProgressLoader: View {
     var tintColor: Color = .blue
     var scaleSize: CGFloat = 1.0
-    
+
     var body: some View {
         ProgressView()
             .scaleEffect(scaleSize, anchor: .center)

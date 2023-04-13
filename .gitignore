@@ -4,3 +4,4 @@ Breakpoints_v2.xcbkptlist
 contents.xcworkspacedata
 DerivedData/
 *xcconfig
+.swiftlint.yml
