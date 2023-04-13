@@ -9,19 +9,19 @@ import Foundation
 
 class CarListInteractor {
     private var service: CarListService
-    var presenter: CarPresenting?
+    var presenter: CarListPresenting?
     init(service: CarListService) {
         self.service = service
     }
 }
 
-extension CarListInteractor: CarInteracting {
+// MARK: - Requesting data
+extension CarListInteractor: CarListInteracting {
     func fetchCars() async {
         do {
             let cars = try await service.fetchList()
             presenter?.didFetchCars(result: .success(cars))
         } catch {
-            
         }
     }
 }

@@ -8,8 +8,8 @@
 import SwiftUI
 import AlertToast
 
-struct CarListView: View{
-    @ObservedObject var adapter: CarAdapter
+struct CarListView: View {
+    @ObservedObject var adapter: CarListViewAdapter
 
     var body: some View {
         NavigationView {
@@ -18,7 +18,7 @@ struct CarListView: View{
                 loader()
                 itemList()
             }
-            .toast(isPresenting: $adapter.state.viewError, duration: 3){
+            .toast(isPresenting: $adapter.state.viewError, duration: 3) {
                 AlertToast(type: .regular, title: AppConstants.ErrorMessage.defaultError)
                     }
             .navigationBarTitle(Text(AppConstants.Text.appTitle))
@@ -29,8 +29,8 @@ struct CarListView: View{
     }
 }
 
-extension CarListView{
-    func itemList()->some View{
+extension CarListView {
+    func itemList() -> some View {
         List(adapter.state.viewObject) { data in
             adapter.navigationRouteBuilder(from: data, content: {
                 CarCell(data: data)
@@ -55,6 +55,6 @@ extension CarListView{
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CarRouter.createModule()
+        CarListRouter.createModule()
     }
 }

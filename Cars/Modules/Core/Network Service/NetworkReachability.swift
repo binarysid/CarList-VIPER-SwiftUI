@@ -8,47 +8,49 @@ import Combine
 import Reachability
 import CombineReachability
 
-enum NetworkStatus{
-    case Available
-    case Offline
-    case None
+enum NetworkStatus {
+    case available
+    case offline
+    case none
 }
 
-protocol ReachabilityProtocol{
-    var status:NetworkStatus{get}
+protocol ReachabilityProtocol {
+    var status: NetworkStatus { get }
     var statusPublisher: Published<NetworkStatus>.Publisher { get }
     func checkReachability()
 }
-final class NetworkReachability:ReachabilityProtocol{
-    @Published private(set) var status: NetworkStatus = .None
-    var statusPublisher: Published<NetworkStatus>.Publisher{ $status }
+
+final class NetworkReachability: ReachabilityProtocol {
+    @Published private(set) var status: NetworkStatus = .none
+    var statusPublisher: Published<NetworkStatus>.Publisher { $status }
     private var reachability: Reachability?
     private var subscriptions = Set<AnyCancellable>()
-    
-    deinit{
+
+    deinit {
         reachability?.stopNotifier()
     }
-    init(){
-        do{
+
+    init() {
+        do {
             reachability = try Reachability()
             try? reachability?.startNotifier()
-        }
-        catch{
+        } catch {
             #if DEBUG
             print("error")
             #endif
         }
     }
-    func checkReachability(){
+
+    func checkReachability() {
         reachability?.reachabilityChanged
-          .sink(receiveValue: {[unowned self] reachability in
-              switch reachability.connection{
+          .sink(receiveValue: { [unowned self] reachability in
+              switch reachability.connection {
               case .unavailable:
-                  status = .Offline
+                  status = .offline
               case .cellular, .wifi:
-                  status = .Available
+                  status = .available
               default:
-                  status = .None
+                  status = .none
               }
           })
           .store(in: &subscriptions)

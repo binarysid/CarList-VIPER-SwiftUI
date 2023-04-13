@@ -18,7 +18,7 @@ enum NetworkError: Error {
     case taskRunning
 }
 
-//extension NetworkError: LocalizedError {
+// extension NetworkError: LocalizedError {
 //    var errorDescription: String? {
 //        switch self {
 //        case .serviceNotFound: return TextConstant.NetworkError.serviceNotFound
@@ -31,4 +31,4 @@ enum NetworkError: Error {
 //        case .taskRunning: return TextConstant.NetworkError.taskRunning
 //        }
 //    }
-//}
+// }

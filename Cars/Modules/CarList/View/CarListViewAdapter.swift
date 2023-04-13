@@ -8,19 +8,22 @@
 import SwiftUI
 import Combine
 
+// Adapter for updating view state and connecting to presenter
 final class CarListViewAdapter: ObservableObject {
-    @Published var state: CarViewState
-    var presenter: CarViewInput?
+    @Published var state: CarListViewState
+    var presenter: CarListViewInput?
 
-    init(state: CarViewState) {
+    init(state: CarListViewState) {
         self.state = state
     }
+
     func fetchList() async {
         await presenter?.fetchCarList()
     }
 }
 
-extension CarListViewAdapter: CarViewOutput {
+// MARK: - View Output
+extension CarListViewAdapter: CarListViewOutput {
     func showLoader() {
         Task {
             await MainActor.run {
@@ -28,7 +31,7 @@ extension CarListViewAdapter: CarViewOutput {
             }
         }
     }
-    
+
     func hideLoader() {
         Task {
             await MainActor.run {
@@ -36,7 +39,8 @@ extension CarListViewAdapter: CarViewOutput {
             }
         }
     }
-    
+
+    // show error message
     func update(error: String) {
         Task {
             await MainActor.run {
@@ -45,7 +49,8 @@ extension CarListViewAdapter: CarViewOutput {
             }
         }
     }
-    
+
+    // update list
     func update(data: [CarViewData]) {
         Task {
             await MainActor.run {
@@ -55,6 +60,7 @@ extension CarListViewAdapter: CarViewOutput {
     }
 }
 
+// MARK: - Navigation
 extension CarListViewAdapter {
     func navigationRouteBuilder<Content: View>(
         from data: CarViewData,
