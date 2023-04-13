@@ -13,7 +13,7 @@ struct SplashView: View {
     var body: some View {
         VStack {
             if self.isActive {
-                CarListConfigurator().configure()
+                CarRouter.createModule()
             } else {
                 Image(AppConstants.Image.Splash)
                     .resizable()
