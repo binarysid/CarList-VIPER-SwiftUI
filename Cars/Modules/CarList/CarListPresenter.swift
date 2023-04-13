@@ -8,13 +8,13 @@
 import Foundation
 
 class CarListPresenter {
-    var router: (any CarRouting)?
-    var interactor: CarInteracting?
-    weak var view: CarViewOutput?
+    var router: (any CarListRouting)?
+    var interactor: CarListInteracting?
+    weak var view: CarListViewOutput?
 }
 
-// MARK:- Presenter Input
-extension CarListPresenter: CarViewInput {
+// MARK: - Presenter Input
+extension CarListPresenter: CarListViewInput {
     func fetchCarList() async {
         await interactor?.fetchCars()
     }
@@ -23,8 +23,8 @@ extension CarListPresenter: CarViewInput {
     }
 }
 
-// MARK:- Presenter Output
-extension CarListPresenter:CarPresenting {
+// MARK: - Presenter Output
+extension CarListPresenter: CarListPresenting {
     func didFetchCars(result: Result<[CarData], NetworkError>) {
         switch result {
         case .success(let data):
@@ -35,10 +35,10 @@ extension CarListPresenter:CarPresenting {
     }
 }
 
-// MARK:- Presentation Logic
+// MARK: - Presentation Logic
 extension CarListPresenter {
     private func convertToViewData(data: [CarData]) -> [CarViewData] {
-        data.map{ item -> CarViewData in
+        data.map { item -> CarViewData in
             let calendar = self.processDateFrom(item.dateTime.toDate())
             return CarViewData(id: item.id, title: item.title, image: item.image, description: item.ingress, date: calendar.date, time: calendar.time)
         }
@@ -47,7 +47,7 @@ extension CarListPresenter {
     private func processDateFrom(_ dateObj: Date?) -> (date: String, time: String) {
         var presentableTime = ""
         var presentableDate = ""
-        if let date = dateObj{
+        if let date = dateObj {
             let time = date.getTime()
             presentableDate = "\(date.getDateOfMonth()) \(date.getMonthName()) \(date.getYearByComparingToCurrent())"
             presentableTime = "\(time.hour):\(time.minute)"

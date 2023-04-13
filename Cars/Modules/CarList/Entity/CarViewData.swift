@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct CarViewData:Hashable,Identifiable {
-    let id:Int64
-    let title:String
-    let image:String?
-    let description:String
-    let date:String
-    let time:String
+struct CarViewData: Hashable, Identifiable {
+    let id: Int64
+    let title: String
+    let image: String?
+    let description: String
+    let date: String
+    let time: String
 }

@@ -14,9 +14,3 @@ struct CarDetailView: View {
         Text(details.title)
     }
 }
-
-//struct CarDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CarDetailView()
-//    }
-//}
