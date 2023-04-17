@@ -8,3 +8,4 @@
 
 "appTitle" = "Cars";
 "Error.default" = "Something went wrong";
+"Error.title" = "Error";

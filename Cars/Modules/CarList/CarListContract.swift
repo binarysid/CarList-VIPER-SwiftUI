@@ -11,18 +11,21 @@ import SwiftUI
 // Contracts between the components wired through the router
 
 // MARK: - Presenter to View
+// sourcery: AutoMockable
 protocol CarListViewOutput: Loadable, AnyObject {
     func update(data: [CarViewData])
     func update(error: String)
 }
 
 // MARK: - View to Presenter
+// sourcery: AutoMockable
 protocol CarListViewInput {
     func fetchCarList() async
     func makeDetailView(with data: CarViewData) -> CarDetailView?
 }
 
 // MARK: - Presenter
+// sourcery: AutoMockable
 protocol CarListPresenting {
     func didFetchCars(result: Result<[CarData], NetworkError>)
 }
@@ -34,13 +37,14 @@ protocol CarListRouting {
     func makeDetailView(with data: CarViewData) -> CarDetailView
 }
 
-// MARK: Interactor
+// MARK: - Interactor
 // sourcery: AutoMockable
 protocol CarListInteracting {
     func fetchCars() async
 }
 
-protocol Loadable {
-    func showLoader()
-    func hideLoader()
+// MARK: - ListFetch Service
+// sourcery: AutoMockable
+protocol CarListFetching {
+    func fetchList() async throws -> [CarData]
 }

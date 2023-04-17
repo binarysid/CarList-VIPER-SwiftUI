@@ -10,7 +10,7 @@ import SwiftUI
 final class CarListRouter: CarListRouting {
     /// Wiring VIPER Cycle
     static func createModule() -> some View {
-        let service = CarListService()
+        let service = CarListService(webService: AsyncService())
         let interactor = CarListInteractor(service: service)
         let presenter = CarListPresenter()
         let router = CarListRouter()

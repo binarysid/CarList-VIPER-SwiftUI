@@ -18,6 +18,8 @@ internal enum TextConstant {
   internal enum Error {
     /// Something went wrong
     internal static let `default` = TextConstant.tr("Localized", "Error.default", fallback: "Something went wrong")
+    /// Error
+    internal static let title = TextConstant.tr("Localized", "Error.title", fallback: "Error")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

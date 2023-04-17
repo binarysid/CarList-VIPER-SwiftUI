@@ -26,6 +26,12 @@
 		061575B429EDB77800C5A590 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575B329EDB77800C5A590 /* Extension+Date.swift */; };
 		061575B629EDBE0500C5A590 /* Images+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575B529EDBE0500C5A590 /* Images+Generated.swift */; };
 		061575B929EDBE3600C5A590 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575B829EDBE3500C5A590 /* Strings+Generated.swift */; };
+		061575BB29EDC3FA00C5A590 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575BA29EDC3FA00C5A590 /* Loadable.swift */; };
+		061575C329EDC5C000C5A590 /* CarListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575C229EDC5C000C5A590 /* CarListServiceTests.swift */; };
+		061575C529EDC6E400C5A590 /* CarListMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575C429EDC6E400C5A590 /* CarListMockData.swift */; };
+		061575C729EDDC5300C5A590 /* AsyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575C629EDDC5300C5A590 /* AsyncService.swift */; };
+		061575CC29EDDD6800C5A590 /* AsyncServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575CB29EDDD6800C5A590 /* AsyncServiceMock.swift */; };
+		061575D029EDE49C00C5A590 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575CF29EDE49C00C5A590 /* Config.swift */; };
 		062B9D3A294BCFA000DC645C /* CarArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D23294BCFA000DC645C /* CarArticleData.swift */; };
 		062B9D3B294BCFA000DC645C /* CarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D24294BCFA000DC645C /* CarContent.swift */; };
 		062B9D3C294BCFA000DC645C /* CarViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D25294BCFA000DC645C /* CarViewData.swift */; };
@@ -86,6 +92,12 @@
 		061575B329EDB77800C5A590 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		061575B529EDBE0500C5A590 /* Images+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Images+Generated.swift"; sourceTree = "<group>"; };
 		061575B829EDBE3500C5A590 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		061575BA29EDC3FA00C5A590 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		061575C229EDC5C000C5A590 /* CarListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListServiceTests.swift; sourceTree = "<group>"; };
+		061575C429EDC6E400C5A590 /* CarListMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListMockData.swift; sourceTree = "<group>"; };
+		061575C629EDDC5300C5A590 /* AsyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncService.swift; sourceTree = "<group>"; };
+		061575CB29EDDD6800C5A590 /* AsyncServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncServiceMock.swift; sourceTree = "<group>"; };
+		061575CF29EDE49C00C5A590 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		062B9D23294BCFA000DC645C /* CarArticleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarArticleData.swift; sourceTree = "<group>"; };
 		062B9D24294BCFA000DC645C /* CarContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarContent.swift; sourceTree = "<group>"; };
 		062B9D25294BCFA000DC645C /* CarViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewData.swift; sourceTree = "<group>"; };
@@ -164,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				0614173629E6F0630016A42E /* Network Service */,
+				061575BA29EDC3FA00C5A590 /* Loadable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -195,6 +208,7 @@
 				0614173729E6F0630016A42E /* EndPoints.swift */,
 				0614173829E6F0630016A42E /* RequestManager.swift */,
 				0614173B29E6F0630016A42E /* NetworkError.swift */,
+				061575C629EDDC5300C5A590 /* AsyncService.swift */,
 			);
 			path = "Network Service";
 			sourceTree = "<group>";
@@ -202,6 +216,8 @@
 		0614174329E6F4750016A42E /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				061575CA29EDDD5500C5A590 /* Classes */,
+				06ADD9052950822F0022658B /* Data */,
 				0614174429E6F6540016A42E /* Mocks+Generated.swift */,
 			);
 			path = Mocks;
@@ -215,6 +231,47 @@
 				061429A82958C58F006FE89B /* Release.xcconfig */,
 			);
 			path = ENV;
+			sourceTree = "<group>";
+		};
+		061575BD29EDC57C00C5A590 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				061575C229EDC5C000C5A590 /* CarListServiceTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		061575BF29EDC58600C5A590 /* CarList */ = {
+			isa = PBXGroup;
+			children = (
+				0614174329E6F4750016A42E /* Mocks */,
+				061575BD29EDC57C00C5A590 /* Tests */,
+			);
+			path = CarList;
+			sourceTree = "<group>";
+		};
+		061575CA29EDDD5500C5A590 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				061575CB29EDDD6800C5A590 /* AsyncServiceMock.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		061575CD29EDE42200C5A590 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				061575BF29EDC58600C5A590 /* CarList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		061575CE29EDE45E00C5A590 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				061575CF29EDE49C00C5A590 /* Config.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		062B9D22294BCFA000DC645C /* Entity */ = {
@@ -293,9 +350,9 @@
 		068701F7294B9F0600C48AAB /* CarsTests */ = {
 			isa = PBXGroup;
 			children = (
-				0614174329E6F4750016A42E /* Mocks */,
+				061575CD29EDE42200C5A590 /* Modules */,
+				061575CE29EDE45E00C5A590 /* Helpers */,
 				066FB841295383BC00DAD613 /* CarsTests.swift */,
-				06ADD9052950822F0022658B /* Mock Data */,
 			);
 			path = CarsTests;
 			sourceTree = "<group>";
@@ -330,13 +387,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		06ADD9052950822F0022658B /* Mock Data */ = {
+		06ADD9052950822F0022658B /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				06ADD90B2950E4BE0022658B /* @Mock-ArticleData.json */,
 				06ADD90D2950E51B0022658B /* @Mock-Empty-ArticleData.json */,
+				061575C429EDC6E400C5A590 /* CarListMockData.swift */,
 			);
-			path = "Mock Data";
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,11 +562,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				062B9D3C294BCFA000DC645C /* CarViewData.swift in Sources */,
+				061575BB29EDC3FA00C5A590 /* Loadable.swift in Sources */,
 				0614174D29E72FE10016A42E /* CarListViewState.swift in Sources */,
 				0614173C29E6F0630016A42E /* EndPoints.swift in Sources */,
 				0690ECEF297B4EA200FE6C96 /* NetworkReachability.swift in Sources */,
 				0614174029E6F0630016A42E /* NetworkError.swift in Sources */,
 				061575B629EDBE0500C5A590 /* Images+Generated.swift in Sources */,
+				061575C729EDDC5300C5A590 /* AsyncService.swift in Sources */,
 				0614174229E6F3540016A42E /* CarListInteractor.swift in Sources */,
 				062B9D3D294BCFA000DC645C /* CarData.swift in Sources */,
 				061429AA2958C765006FE89B /* Config.swift in Sources */,
@@ -539,6 +599,10 @@
 			files = (
 				066FB843295383BC00DAD613 /* CarsTests.swift in Sources */,
 				0614174529E6F6540016A42E /* Mocks+Generated.swift in Sources */,
+				061575CC29EDDD6800C5A590 /* AsyncServiceMock.swift in Sources */,
+				061575D029EDE49C00C5A590 /* Config.swift in Sources */,
+				061575C329EDC5C000C5A590 /* CarListServiceTests.swift in Sources */,
+				061575C529EDC6E400C5A590 /* CarListMockData.swift in Sources */,
 				066FB8462953A27C00DAD613 /* ProgressLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
