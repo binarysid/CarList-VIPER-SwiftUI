@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		06047EB729E8420600D2F437 /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047EB629E8420600D2F437 /* CarDetailView.swift */; };
 		06098558294E48BD006AE465 /* CombineReachability in Frameworks */ = {isa = PBXBuildFile; productRef = 06098557294E48BD006AE465 /* CombineReachability */; };
-		060BF8772953ACE100CA82E8 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 060BF8762953ACE100CA82E8 /* AlertToast */; };
 		0614172E29E6E06B0016A42E /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0614172D29E6E06B0016A42E /* Localized.strings */; };
 		0614173329E6EE100016A42E /* WebService in Frameworks */ = {isa = PBXBuildFile; productRef = 0614173229E6EE100016A42E /* WebService */; };
 		0614173529E6EF440016A42E /* CarListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614173429E6EF440016A42E /* CarListService.swift */; };
@@ -23,13 +22,16 @@
 		0614174B29E7196A0016A42E /* CarListViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614174A29E7196A0016A42E /* CarListViewAdapter.swift */; };
 		0614174D29E72FE10016A42E /* CarListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614174C29E72FE10016A42E /* CarListViewState.swift */; };
 		061429AA2958C765006FE89B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061429A92958C765006FE89B /* Config.swift */; };
+		061575B229EDB74C00C5A590 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575B129EDB74C00C5A590 /* Extension+String.swift */; };
+		061575B429EDB77800C5A590 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575B329EDB77800C5A590 /* Extension+Date.swift */; };
+		061575B629EDBE0500C5A590 /* Images+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575B529EDBE0500C5A590 /* Images+Generated.swift */; };
+		061575B929EDBE3600C5A590 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061575B829EDBE3500C5A590 /* Strings+Generated.swift */; };
 		062B9D3A294BCFA000DC645C /* CarArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D23294BCFA000DC645C /* CarArticleData.swift */; };
 		062B9D3B294BCFA000DC645C /* CarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D24294BCFA000DC645C /* CarContent.swift */; };
 		062B9D3C294BCFA000DC645C /* CarViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D25294BCFA000DC645C /* CarViewData.swift */; };
 		062B9D3D294BCFA000DC645C /* CarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D26294BCFA000DC645C /* CarData.swift */; };
 		062B9D3E294BCFA000DC645C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062B9D28294BCFA000DC645C /* Assets.xcassets */; };
-		062B9D3F294BCFA000DC645C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2A294BCFA000DC645C /* Extensions.swift */; };
-		062B9D40294BCFA000DC645C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2B294BCFA000DC645C /* AppConstants.swift */; };
+		062B9D3F294BCFA000DC645C /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2A294BCFA000DC645C /* Extension+View.swift */; };
 		06593E1F294DCF9D00406025 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06593E1E294DCF9C00406025 /* CarCell.swift */; };
 		0664924F29E8688000C16533 /* CarListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0664924E29E8688000C16533 /* CarListContract.swift */; };
 		066FB843295383BC00DAD613 /* CarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066FB841295383BC00DAD613 /* CarsTests.swift */; };
@@ -80,13 +82,16 @@
 		061429A72958C57F006FE89B /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		061429A82958C58F006FE89B /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		061429A92958C765006FE89B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		061575B129EDB74C00C5A590 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		061575B329EDB77800C5A590 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
+		061575B529EDBE0500C5A590 /* Images+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Images+Generated.swift"; sourceTree = "<group>"; };
+		061575B829EDBE3500C5A590 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		062B9D23294BCFA000DC645C /* CarArticleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarArticleData.swift; sourceTree = "<group>"; };
 		062B9D24294BCFA000DC645C /* CarContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarContent.swift; sourceTree = "<group>"; };
 		062B9D25294BCFA000DC645C /* CarViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewData.swift; sourceTree = "<group>"; };
 		062B9D26294BCFA000DC645C /* CarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarData.swift; sourceTree = "<group>"; };
 		062B9D28294BCFA000DC645C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		062B9D2A294BCFA000DC645C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		062B9D2B294BCFA000DC645C /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		062B9D2A294BCFA000DC645C /* Extension+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		06593E1E294DCF9C00406025 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		0664924E29E8688000C16533 /* CarListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListContract.swift; sourceTree = "<group>"; };
 		066FB841295383BC00DAD613 /* CarsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsTests.swift; sourceTree = "<group>"; };
@@ -111,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060BF8772953ACE100CA82E8 /* AlertToast in Frameworks */,
 				0614173329E6EE100016A42E /* WebService in Frameworks */,
 				06098558294E48BD006AE465 /* CombineReachability in Frameworks */,
 			);
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				0614172D29E6E06B0016A42E /* Localized.strings */,
+				061575B829EDBE3500C5A590 /* Strings+Generated.swift */,
+				061575B529EDBE0500C5A590 /* Images+Generated.swift */,
 			);
 			path = Localizables;
 			sourceTree = "<group>";
@@ -234,9 +240,10 @@
 			isa = PBXGroup;
 			children = (
 				0614172C29E6E0410016A42E /* Localizables */,
-				062B9D2A294BCFA000DC645C /* Extensions.swift */,
-				062B9D2B294BCFA000DC645C /* AppConstants.swift */,
+				062B9D2A294BCFA000DC645C /* Extension+View.swift */,
 				066FB8442953A27C00DAD613 /* ProgressLoader.swift */,
+				061575B129EDB74C00C5A590 /* Extension+String.swift */,
+				061575B329EDB77800C5A590 /* Extension+Date.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				068701E7294B9F0200C48AAB /* CarsApp.swift */,
+				066FB8472953A66B00DAD613 /* SplashView.swift */,
 				061429A92958C765006FE89B /* Config.swift */,
 			);
 			path = Root;
@@ -318,7 +326,6 @@
 				0614174A29E7196A0016A42E /* CarListViewAdapter.swift */,
 				068701E9294B9F0200C48AAB /* CarListView.swift */,
 				06593E1E294DCF9C00406025 /* CarCell.swift */,
-				066FB8472953A66B00DAD613 /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -351,7 +358,6 @@
 			name = Cars;
 			packageProductDependencies = (
 				06098557294E48BD006AE465 /* CombineReachability */,
-				060BF8762953ACE100CA82E8 /* AlertToast */,
 				0614173229E6EE100016A42E /* WebService */,
 			);
 			productName = Cars;
@@ -428,7 +434,6 @@
 			mainGroup = 068701DB294B9F0200C48AAB;
 			packageReferences = (
 				06098556294E48BD006AE465 /* XCRemoteSwiftPackageReference "CombineReachability" */,
-				060BF8752953ACE100CA82E8 /* XCRemoteSwiftPackageReference "AlertToast" */,
 				0614173129E6EE100016A42E /* XCRemoteSwiftPackageReference "WebService" */,
 			);
 			productRefGroup = 068701E5294B9F0200C48AAB /* Products */;
@@ -499,29 +504,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				062B9D3C294BCFA000DC645C /* CarViewData.swift in Sources */,
-				062B9D40294BCFA000DC645C /* AppConstants.swift in Sources */,
 				0614174D29E72FE10016A42E /* CarListViewState.swift in Sources */,
 				0614173C29E6F0630016A42E /* EndPoints.swift in Sources */,
 				0690ECEF297B4EA200FE6C96 /* NetworkReachability.swift in Sources */,
 				0614174029E6F0630016A42E /* NetworkError.swift in Sources */,
+				061575B629EDBE0500C5A590 /* Images+Generated.swift in Sources */,
 				0614174229E6F3540016A42E /* CarListInteractor.swift in Sources */,
 				062B9D3D294BCFA000DC645C /* CarData.swift in Sources */,
 				061429AA2958C765006FE89B /* Config.swift in Sources */,
 				0614173529E6EF440016A42E /* CarListService.swift in Sources */,
+				061575B229EDB74C00C5A590 /* Extension+String.swift in Sources */,
 				068701EA294B9F0200C48AAB /* CarListView.swift in Sources */,
 				0614174B29E7196A0016A42E /* CarListViewAdapter.swift in Sources */,
 				0614174729E713440016A42E /* CarListRouter.swift in Sources */,
 				068701E8294B9F0200C48AAB /* CarsApp.swift in Sources */,
 				0664924F29E8688000C16533 /* CarListContract.swift in Sources */,
 				066FB8482953A66B00DAD613 /* SplashView.swift in Sources */,
+				061575B929EDBE3600C5A590 /* Strings+Generated.swift in Sources */,
 				062B9D3B294BCFA000DC645C /* CarContent.swift in Sources */,
 				0614174929E714EC0016A42E /* CarListPresenter.swift in Sources */,
-				062B9D3F294BCFA000DC645C /* Extensions.swift in Sources */,
+				062B9D3F294BCFA000DC645C /* Extension+View.swift in Sources */,
 				06047EB729E8420600D2F437 /* CarDetailView.swift in Sources */,
 				0614173D29E6F0630016A42E /* RequestManager.swift in Sources */,
 				062B9D3A294BCFA000DC645C /* CarArticleData.swift in Sources */,
 				06593E1F294DCF9D00406025 /* CarCell.swift in Sources */,
 				066FB8452953A27C00DAD613 /* ProgressLoader.swift in Sources */,
+				061575B429EDB77800C5A590 /* Extension+Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,14 +1037,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		060BF8752953ACE100CA82E8 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/elai950/AlertToast.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		0614173129E6EE100016A42E /* XCRemoteSwiftPackageReference "WebService" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/binarysid/WebService.git";
@@ -1052,11 +1052,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 06098556294E48BD006AE465 /* XCRemoteSwiftPackageReference "CombineReachability" */;
 			productName = CombineReachability;
-		};
-		060BF8762953ACE100CA82E8 /* AlertToast */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 060BF8752953ACE100CA82E8 /* XCRemoteSwiftPackageReference "AlertToast" */;
-			productName = AlertToast;
 		};
 		0614173229E6EE100016A42E /* WebService */ = {
 			isa = XCSwiftPackageProductDependency;

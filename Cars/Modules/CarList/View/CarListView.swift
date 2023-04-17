@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AlertToast
 
 struct CarListView: View {
     @ObservedObject var adapter: CarListViewAdapter
@@ -18,10 +17,9 @@ struct CarListView: View {
                 loader()
                 itemList()
             }
-            .toast(isPresenting: $adapter.state.viewError, duration: 3) {
-                AlertToast(type: .regular, title: AppConstants.ErrorMessage.defaultError)
-                    }
-            .navigationBarTitle(Text(AppConstants.Text.appTitle))
+            .alert(TextConstant.Error.default, isPresented: $adapter.state.viewError, actions: {
+            })
+            .navigationBarTitle(Text(TextConstant.appTitle))
         }
         .task {
             await adapter.fetchList()

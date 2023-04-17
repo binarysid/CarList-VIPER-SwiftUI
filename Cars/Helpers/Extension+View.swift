@@ -7,21 +7,6 @@
 import UIKit
 import SwiftUI
 
-class AppTheme {
-    static func navigationBarColors(background: UIColor?,
-                                    titleColor: UIColor? = nil, tintColor: UIColor? = nil ) {
-        let navigationBarAppearance = UINavigationBarAppearance()
-        navigationBarAppearance.configureWithOpaqueBackground()
-        navigationBarAppearance.backgroundColor = background ?? .clear
-        navigationBarAppearance.titleTextAttributes = [.foregroundColor: titleColor ?? .black]
-        navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor ?? .black]
-        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
-        UINavigationBar.appearance().compactAppearance = navigationBarAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-        UINavigationBar.appearance().tintColor = tintColor ?? titleColor ?? .black
-    }
-}
-
 extension UIImageView {
     func loadFrom(URLAddress: String) {
         guard let url = URL(string: URLAddress) else {

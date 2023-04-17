@@ -57,7 +57,7 @@ extension CarCell {
     }
 
     func defaultThumbNail() -> some View {
-        Image(AppConstants.Image.DefaultCar)
+        Image(Asset.Assets.audiQ2.name)
             .resizable()
             .scaledToFill()
     }

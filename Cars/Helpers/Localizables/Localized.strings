@@ -5,3 +5,6 @@
   Created by Linkon Sid on 12/4/23.
   
 */
+
+"appTitle" = "Cars";
+"Error.default" = "Something went wrong";
