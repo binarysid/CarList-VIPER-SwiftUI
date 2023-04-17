@@ -15,7 +15,7 @@ struct SplashView: View {
             if self.isActive {
                 CarListRouter.createModule()
             } else {
-                Image(AppConstants.Image.Splash)
+                Image(Asset.Assets.splash.name)
                     .resizable()
                     .scaledToFit()
             }
