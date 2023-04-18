@@ -66,6 +66,7 @@ class CarListFetchingMock: CarListFetching {
 class CarListInteractingMock: CarListInteracting {
 
 
+    var presenter: CarListPresenting?
 
 
     //MARK: - fetchCars
@@ -85,6 +86,9 @@ class CarListInteractingMock: CarListInteracting {
 class CarListPresentingMock: CarListPresenting {
 
 
+    var router: (any CarListRouting)?
+    var interactor: CarListInteracting?
+    var view: CarListViewOutput?
 
 
     //MARK: - didFetchCars
@@ -149,6 +153,7 @@ class CarListViewInputMock: CarListViewInput {
 class CarListViewOutputMock: CarListViewOutput {
 
 
+    var presenter: CarListViewInput?
 
 
     //MARK: - update

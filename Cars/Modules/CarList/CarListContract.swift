@@ -13,6 +13,7 @@ import SwiftUI
 // MARK: - Presenter to View
 // sourcery: AutoMockable
 protocol CarListViewOutput: Loadable, AnyObject {
+    var presenter: CarListViewInput? { get set }
     func update(data: [CarViewData])
     func update(error: String)
 }
@@ -27,6 +28,9 @@ protocol CarListViewInput {
 // MARK: - Presenter
 // sourcery: AutoMockable
 protocol CarListPresenting {
+    var router: (any CarListRouting)? { get set }
+    var interactor: CarListInteracting? { get set }
+    var view: CarListViewOutput? { get set }
     func didFetchCars(result: Result<[CarData], NetworkError>)
 }
 
@@ -40,6 +44,7 @@ protocol CarListRouting {
 // MARK: - Interactor
 // sourcery: AutoMockable
 protocol CarListInteracting {
+    var presenter: CarListPresenting? { get set }
     func fetchCars() async
 }
 
