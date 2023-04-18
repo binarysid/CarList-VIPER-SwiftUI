@@ -27,6 +27,7 @@ final class CarListPresenterTests: XCTestCase {
         sut.view = view
         interactor.presenter = sut
         expectation = expectation(description: "Expectation for \(Self.description())")
+        super.setUp()
     }
 
     func test_fetch_car_list() async {
@@ -63,5 +64,6 @@ final class CarListPresenterTests: XCTestCase {
         interactor = nil
         view = nil
         sut = nil
+        super.tearDown()
     }
 }

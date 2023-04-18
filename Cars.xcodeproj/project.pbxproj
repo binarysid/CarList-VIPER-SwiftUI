@@ -55,6 +55,7 @@
 		06ADD90E2950E51B0022658B /* @Mock-Empty-ArticleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 06ADD90D2950E51B0022658B /* @Mock-Empty-ArticleData.json */; };
 		06C35E2429EE8C850081B3EE /* Mocks+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C35E2329EE8C850081B3EE /* Mocks+Generated.swift */; };
 		06D3DF2F29EEA4D700648659 /* CarListRoutingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D3DF2E29EEA4D700648659 /* CarListRoutingMock.swift */; };
+		06D3DF3129EEB99A00648659 /* CarListViewAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D3DF3029EEB99A00648659 /* CarListViewAdapterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		06ADD90D2950E51B0022658B /* @Mock-Empty-ArticleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "@Mock-Empty-ArticleData.json"; sourceTree = "<group>"; };
 		06C35E2329EE8C850081B3EE /* Mocks+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Mocks+Generated.swift"; path = "CarsTests/Mocks/Mocks+Generated.swift"; sourceTree = SOURCE_ROOT; };
 		06D3DF2E29EEA4D700648659 /* CarListRoutingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListRoutingMock.swift; sourceTree = "<group>"; };
+		06D3DF3029EEB99A00648659 /* CarListViewAdapterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewAdapterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 				061575C229EDC5C000C5A590 /* CarListServiceTests.swift */,
 				065230C529EE856D00507CF5 /* CarListInteractorTests.swift */,
 				065230C729EE8AC800507CF5 /* CarListPresenterTests.swift */,
+				06D3DF3029EEB99A00648659 /* CarListViewAdapterTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				061575C329EDC5C000C5A590 /* CarListServiceTests.swift in Sources */,
 				065230C829EE8AC800507CF5 /* CarListPresenterTests.swift in Sources */,
 				061575C529EDC6E400C5A590 /* CarListMockData.swift in Sources */,
+				06D3DF3129EEB99A00648659 /* CarListViewAdapterTest.swift in Sources */,
 				066FB8462953A27C00DAD613 /* ProgressLoader.swift in Sources */,
 				065230C629EE856D00507CF5 /* CarListInteractorTests.swift in Sources */,
 				06C35E2429EE8C850081B3EE /* Mocks+Generated.swift in Sources */,

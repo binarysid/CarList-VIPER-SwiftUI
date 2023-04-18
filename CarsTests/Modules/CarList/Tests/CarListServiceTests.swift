@@ -21,6 +21,7 @@ final class CarListServiceTests: XCTestCase {
         webService.throwableError = NetworkError.invalidResponse
         sut = CarListService(webService: webService)
         expectation = expectation(description: "Expectation for \(Self.description())")
+        super.setUp()
     }
 
     func test_fetch_service() async {
@@ -39,5 +40,6 @@ final class CarListServiceTests: XCTestCase {
         webService = nil
         sut = nil
         expectation = nil
+        super.tearDown()
     }
 }
