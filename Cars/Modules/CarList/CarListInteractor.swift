@@ -10,7 +10,7 @@ import Foundation
 class CarListInteractor {
     private var service: CarListFetching
     var presenter: CarListPresenting?
-    init(service: CarListService) {
+    init(service: CarListFetching) {
         self.service = service
     }
 }

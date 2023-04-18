@@ -38,6 +38,7 @@
 		062B9D3D294BCFA000DC645C /* CarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D26294BCFA000DC645C /* CarData.swift */; };
 		062B9D3E294BCFA000DC645C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062B9D28294BCFA000DC645C /* Assets.xcassets */; };
 		062B9D3F294BCFA000DC645C /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2A294BCFA000DC645C /* Extension+View.swift */; };
+		065230C629EE856D00507CF5 /* CarListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065230C529EE856D00507CF5 /* CarListInteractorTests.swift */; };
 		06593E1F294DCF9D00406025 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06593E1E294DCF9C00406025 /* CarCell.swift */; };
 		0664924F29E8688000C16533 /* CarListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0664924E29E8688000C16533 /* CarListContract.swift */; };
 		066FB843295383BC00DAD613 /* CarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066FB841295383BC00DAD613 /* CarsTests.swift */; };
@@ -104,6 +105,7 @@
 		062B9D26294BCFA000DC645C /* CarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarData.swift; sourceTree = "<group>"; };
 		062B9D28294BCFA000DC645C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		062B9D2A294BCFA000DC645C /* Extension+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
+		065230C529EE856D00507CF5 /* CarListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListInteractorTests.swift; sourceTree = "<group>"; };
 		06593E1E294DCF9C00406025 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		0664924E29E8688000C16533 /* CarListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListContract.swift; sourceTree = "<group>"; };
 		066FB841295383BC00DAD613 /* CarsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsTests.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				061575C229EDC5C000C5A590 /* CarListServiceTests.swift */,
+				065230C529EE856D00507CF5 /* CarListInteractorTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				061575C329EDC5C000C5A590 /* CarListServiceTests.swift in Sources */,
 				061575C529EDC6E400C5A590 /* CarListMockData.swift in Sources */,
 				066FB8462953A27C00DAD613 /* ProgressLoader.swift in Sources */,
+				065230C629EE856D00507CF5 /* CarListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
