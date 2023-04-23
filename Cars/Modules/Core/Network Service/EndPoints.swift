@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import URLRequestBuilder
 
 enum EndPoints {
     static let baseURL =  "https://" + Config.stringValue(forKey: "BASE_URL")
+    static let requestBuilder = URLRequestBuilder()
 
     case carList
 
@@ -16,7 +18,7 @@ enum EndPoints {
         switch self {
         case .carList:
             let url = EndPoints.baseURL + "/carlist.json"
-            return RequestManager.getURLRequest(baseURL: url)
+            return EndPoints.requestBuilder.createRequestWith(baseURL: url)
         }
     }
 }

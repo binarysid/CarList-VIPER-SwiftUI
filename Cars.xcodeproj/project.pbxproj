@@ -13,7 +13,6 @@
 		0614173329E6EE100016A42E /* WebService in Frameworks */ = {isa = PBXBuildFile; productRef = 0614173229E6EE100016A42E /* WebService */; };
 		0614173529E6EF440016A42E /* CarListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614173429E6EF440016A42E /* CarListService.swift */; };
 		0614173C29E6F0630016A42E /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614173729E6F0630016A42E /* EndPoints.swift */; };
-		0614173D29E6F0630016A42E /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614173829E6F0630016A42E /* RequestManager.swift */; };
 		0614174029E6F0630016A42E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614173B29E6F0630016A42E /* NetworkError.swift */; };
 		0614174229E6F3540016A42E /* CarListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614174129E6F3540016A42E /* CarListInteractor.swift */; };
 		0614174729E713440016A42E /* CarListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0614174629E713440016A42E /* CarListRouter.swift */; };
@@ -37,6 +36,7 @@
 		062B9D3D294BCFA000DC645C /* CarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D26294BCFA000DC645C /* CarData.swift */; };
 		062B9D3E294BCFA000DC645C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062B9D28294BCFA000DC645C /* Assets.xcassets */; };
 		062B9D3F294BCFA000DC645C /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B9D2A294BCFA000DC645C /* Extension+View.swift */; };
+		064F84DA29F59A3E00386985 /* URLRequestBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = 064F84D929F59A3E00386985 /* URLRequestBuilder */; };
 		065230C629EE856D00507CF5 /* CarListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065230C529EE856D00507CF5 /* CarListInteractorTests.swift */; };
 		065230C829EE8AC800507CF5 /* CarListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065230C729EE8AC800507CF5 /* CarListPresenterTests.swift */; };
 		06593E1F294DCF9D00406025 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06593E1E294DCF9C00406025 /* CarCell.swift */; };
@@ -80,7 +80,6 @@
 		0614172D29E6E06B0016A42E /* Localized.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localized.strings; sourceTree = "<group>"; };
 		0614173429E6EF440016A42E /* CarListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListService.swift; sourceTree = "<group>"; };
 		0614173729E6F0630016A42E /* EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
-		0614173829E6F0630016A42E /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		0614173B29E6F0630016A42E /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0614174129E6F3540016A42E /* CarListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListInteractor.swift; sourceTree = "<group>"; };
 		0614174629E713440016A42E /* CarListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListRouter.swift; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 			files = (
 				0614173329E6EE100016A42E /* WebService in Frameworks */,
 				06098558294E48BD006AE465 /* CombineReachability in Frameworks */,
+				064F84DA29F59A3E00386985 /* URLRequestBuilder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +214,6 @@
 			children = (
 				0690ECEE297B4EA200FE6C96 /* NetworkReachability.swift */,
 				0614173729E6F0630016A42E /* EndPoints.swift */,
-				0614173829E6F0630016A42E /* RequestManager.swift */,
 				0614173B29E6F0630016A42E /* NetworkError.swift */,
 				061575C629EDDC5300C5A590 /* AsyncService.swift */,
 			);
@@ -429,6 +428,7 @@
 			packageProductDependencies = (
 				06098557294E48BD006AE465 /* CombineReachability */,
 				0614173229E6EE100016A42E /* WebService */,
+				064F84D929F59A3E00386985 /* URLRequestBuilder */,
 			);
 			productName = Cars;
 			productReference = 068701E4294B9F0200C48AAB /* Cars.app */;
@@ -505,6 +505,7 @@
 			packageReferences = (
 				06098556294E48BD006AE465 /* XCRemoteSwiftPackageReference "CombineReachability" */,
 				0614173129E6EE100016A42E /* XCRemoteSwiftPackageReference "WebService" */,
+				064F84D829F59A3E00386985 /* XCRemoteSwiftPackageReference "URLRequestBuilder" */,
 			);
 			productRefGroup = 068701E5294B9F0200C48AAB /* Products */;
 			projectDirPath = "";
@@ -597,7 +598,6 @@
 				0614174929E714EC0016A42E /* CarListPresenter.swift in Sources */,
 				062B9D3F294BCFA000DC645C /* Extension+View.swift in Sources */,
 				06047EB729E8420600D2F437 /* CarDetailView.swift in Sources */,
-				0614173D29E6F0630016A42E /* RequestManager.swift in Sources */,
 				062B9D3A294BCFA000DC645C /* CarArticleData.swift in Sources */,
 				06593E1F294DCF9D00406025 /* CarCell.swift in Sources */,
 				066FB8452953A27C00DAD613 /* ProgressLoader.swift in Sources */,
@@ -1125,6 +1125,14 @@
 				kind = branch;
 			};
 		};
+		064F84D829F59A3E00386985 /* XCRemoteSwiftPackageReference "URLRequestBuilder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/binarysid/URLRequestBuilder";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1137,6 +1145,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0614173129E6EE100016A42E /* XCRemoteSwiftPackageReference "WebService" */;
 			productName = WebService;
+		};
+		064F84D929F59A3E00386985 /* URLRequestBuilder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 064F84D829F59A3E00386985 /* XCRemoteSwiftPackageReference "URLRequestBuilder" */;
+			productName = URLRequestBuilder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
